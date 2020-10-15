@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy todir="/home/soumik/Desktop/Java/Java EE projects/Book Catalogue/Backend/target/classes/public">
+    <fileset dir="/home/soumik/Desktop/Java/Java EE projects/Book Catalogue/Backend/frontend/build"/>
+  </copy>
+</target>
+</project>
