@@ -15,7 +15,7 @@ class BookList extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:8080/api/books')
+    axios.get('https://soumik-book-store.herokuapp.com/api/books')
     .then((res)=>{
       this.setState({
         books: res.data
@@ -24,7 +24,7 @@ class BookList extends Component {
   }
 
   deleteItem=(index)=>{
-    axios.delete("http://localhost:8080/api/books/"+index)
+    axios.delete("https://soumik-book-store.herokuapp.com/api/books/"+index)
     .then(res=>{
       if(res.data!=null){
         alert('Book Deleted Successfully');

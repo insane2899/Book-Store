@@ -23,7 +23,7 @@ class AddBook extends Component {
   }
 
   findBookById = (id) =>{
-    axios.get("http://localhost:8080/api/books/"+id)
+    axios.get("https://soumik-book-store.herokuapp.com/api/books/"+id)
     .then(res=>{
       if(res.data != null){
         this.setState({
@@ -53,7 +53,7 @@ class AddBook extends Component {
       var book = {name: this.state.title, author: this.state.author, isbn: this.state.isbn, cost:this.state.cost};
       axios({
         method: 'post',
-        url: 'http://localhost:8080/api/books',
+        url: 'https://soumik-book-store.herokuapp.com/api/books',
         data: book
       })
       .then((res)=>{
@@ -68,7 +68,7 @@ class AddBook extends Component {
       var book = {name: this.state.title, author: this.state.author, isbn: this.state.isbn, cost: this.state.cost};
       axios({
         method: 'put',
-        url: 'http://localhost:8080/api/books/'+this.state.id,
+        url: 'https://soumik-book-store.herokuapp.com/api/books/'+this.state.id,
         data: book
       })
       .then((res)=>{
